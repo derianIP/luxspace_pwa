@@ -1,24 +1,10 @@
 import React from "react";
-import {
-  Arrived,
-  AsideMenu,
-  Browse,
-  Clients,
-  Footer,
-  Header,
-  Hero,
-} from "./components/molecules";
+import { Home } from "./pages";
 
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
-      <Browse />
-      <Arrived />
-      <Clients />
-      <AsideMenu />
-      <Footer />
+      <Home />
     </>
   );
 }

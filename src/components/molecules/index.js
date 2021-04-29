@@ -5,5 +5,15 @@ import Arrived from "./Arrived";
 import Clients from "./Clients";
 import AsideMenu from "./AsideMenu";
 import Footer from "./Footer";
+import ArrivedItem from "./ArrivedItem";
 
-export { Header, Hero, Browse, Arrived, Clients, AsideMenu, Footer };
+export {
+  Header,
+  Hero,
+  Browse,
+  Arrived,
+  Clients,
+  AsideMenu,
+  Footer,
+  ArrivedItem,
+};

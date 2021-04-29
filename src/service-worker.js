@@ -79,6 +79,27 @@ registerRoute(
   })
 );
 
+registerRoute(
+  ({ url }) => url.origin.includes("qorebase.io"),
+  new NetworkFirst({
+    cacheName: "apidata",
+    plugins: [
+      new ExpirationPlugin({
+        maxAgeSeconds: 360,
+        maxEntries: 30,
+      }),
+    ],
+  })
+);
+
+registerRoute(
+  ({ url }) => /\.(jpe?g|png)$/i.test(url.pathname),
+  new StaleWhileRevalidate({
+    cacheName: "apiimages",
+    plugins: [new ExpirationPlugin({ maxEntries: 50 })],
+  })
+);
+
 self.addEventListener("install", (event) => {
   console.log("SW Install");
 
