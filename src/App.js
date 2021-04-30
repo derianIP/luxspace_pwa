@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Offline } from "./components";
-import { Home, Splash } from "./pages";
+import { Router } from "./config";
+import { Splash } from "./pages";
 
 function App() {
   const [offlineStatus, setOfflineStatus] = useState(!navigator.onLine);
@@ -33,7 +34,7 @@ function App() {
       ) : (
         <>
           {offlineStatus && <Offline />}
-          <Home />
+          <Router />
         </>
       )}
     </>
